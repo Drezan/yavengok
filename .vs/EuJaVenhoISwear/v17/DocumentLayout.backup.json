@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|c:\\users\\a.vega\\onedrive - employer solutions\\desktop\\dude\\eujavenhoiswear\\eujavenhoiswear\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|solutionrelative:eujavenhoiswear\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\eujavenhoiswear\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|solutionrelative:eujavenhoiswear\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|c:\\users\\a.vega\\onedrive - employer solutions\\desktop\\dude\\eujavenhoiswear\\eujavenhoiswear\\switcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|solutionrelative:eujavenhoiswear\\switcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|c:\\users\\a.vega\\onedrive - employer solutions\\desktop\\dude\\eujavenhoiswear\\eujavenhoiswear\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98604EC9-A7E7-4BAE-B91A-9568854DC36A}|EuJaVenhoISwear\\EuJaVenhoISwear.csproj|solutionrelative:eujavenhoiswear\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Switcher.cs",
+              "DocumentMoniker": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Switcher.cs",
+              "RelativeDocumentMoniker": "EuJaVenhoISwear\\Switcher.cs",
+              "ToolTip": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Switcher.cs",
+              "RelativeToolTip": "EuJaVenhoISwear\\Switcher.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T14:09:14.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.cs",
+              "RelativeDocumentMoniker": "EuJaVenhoISwear\\Form1.cs",
+              "ToolTip": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.cs",
+              "RelativeToolTip": "EuJaVenhoISwear\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowGIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T19:40:58.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "EuJaVenhoISwear\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.Designer.cs",
+              "RelativeToolTip": "EuJaVenhoISwear\\Form1.Designer.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAYwFoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T19:30:02.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.cs",
+              "RelativeDocumentMoniker": "EuJaVenhoISwear\\Form1.cs",
+              "ToolTip": "C:\\Users\\a.vega\\OneDrive - Employer Solutions\\Desktop\\Dude\\EuJaVenhoISwear\\EuJaVenhoISwear\\Form1.cs [Design]",
+              "RelativeToolTip": "EuJaVenhoISwear\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T14:48:34.767Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
