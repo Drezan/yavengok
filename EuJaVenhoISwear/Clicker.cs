@@ -1,8 +1,7 @@
 ﻿using System.Runtime.InteropServices;
-using System.Windows.Forms.VisualStyles;
 using WindowsInput;
 
-namespace EuJaVenhoISwear
+namespace YaVengoOk
 {
     public class Clicker
     {
@@ -15,6 +14,8 @@ namespace EuJaVenhoISwear
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
+        public static bool IsOnOriginalWindow = true;
+        public static Action<bool>? OnWindowFocusChanged;
 
         public void InitializeTargetWindow()
         {
@@ -32,31 +33,33 @@ namespace EuJaVenhoISwear
 
                 var loopActiveNow = DateTime.Now.AddMinutes(5);
 
-                while (DateTime.Now < loopActiveNow && !token.IsCancellationRequested)
+                int activeMinutes = random.Next(10, 13);
+                var activeUntil = DateTime.Now.AddMinutes(activeMinutes);
+
+                while (DateTime.Now < activeUntil && !token.IsCancellationRequested)
                 {
                     PerformClickSequence();
-                    await Task.Delay(random.Next(8000, 25000), token);
+                    await Task.Delay(random.Next(4000, 12000), token);
                 }
 
-                var stopUntil = DateTime.Now.AddMinutes(10);
-
-                while (DateTime.Now < stopUntil && !token.IsCancellationRequested)
-                {
-                    Thread.Sleep(random.Next(1000));
-                }
+                int longPauseSeconds = random.Next(180, 201);
+                await Task.Delay(TimeSpan.FromSeconds(longPauseSeconds), token);
             }
         }
 
         private void PerformClickSequence()
         {
+            if (!IsOnOriginalWindow || GetForegroundWindow() != _targetWindowHandle)
+                return;
+
             int clickType = random.Next(0, 10);
 
-            if (clickType <= 5)
+            if (clickType <= 6)
             {
                 // Un click Simple
                 sim.Mouse.LeftButtonClick();
             }
-            else if (clickType <= 7)
+            else if (clickType <= 8)
             {
                 // Doble Click Izquierdo
                 sim.Mouse.LeftButtonClick();
@@ -65,10 +68,15 @@ namespace EuJaVenhoISwear
             }
             else
             {
+                var originalPos = Cursor.Position;
+
                 sim.Mouse.RightButtonClick();
                 Thread.Sleep(random.Next(1000, 3000)); //Pequeña pausa para hacerlo un poco realista
-                sim.Mouse.MoveMouseBy(5, 5);
+                sim.Mouse.MoveMouseBy(-30, 0);
+                Thread.Sleep(100);
                 sim.Mouse.LeftButtonClick();
+
+                Cursor.Position = originalPos;
             }
         }
     }

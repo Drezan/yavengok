@@ -1,6 +1,6 @@
 ﻿using MetroFramework.Forms;
 
-namespace EuJaVenhoISwear
+namespace YaVengoOk
 {
     partial class Form1 : MetroForm
     {

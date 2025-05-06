@@ -1,4 +1,4 @@
-namespace EuJaVenhoISwear
+namespace YaVengoOk
 {
     internal static class Program
     {

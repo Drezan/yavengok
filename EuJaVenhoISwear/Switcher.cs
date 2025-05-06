@@ -1,7 +1,7 @@
 ﻿using WindowsInput;
 using WindowsInput.Native;
 
-namespace EuJaVenhoISwear
+namespace YaVengoOk
 {
     public class Switcher
     {
@@ -33,7 +33,14 @@ namespace EuJaVenhoISwear
 
         private void PerformSwitchSequence()
         {
-            sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.MENU, VirtualKeyCode.TAB);
+            sim.Keyboard.KeyDown(VirtualKeyCode.MENU);
+            Thread.Sleep(100);
+            sim.Keyboard.KeyPress(VirtualKeyCode.TAB);
+            Thread.Sleep(100);
+            sim.Keyboard.KeyUp(VirtualKeyCode.MENU);
+
+            Clicker.IsOnOriginalWindow = !Clicker.IsOnOriginalWindow;
+            Clicker.OnWindowFocusChanged?.Invoke(Clicker.IsOnOriginalWindow);
         }
     }
 }

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace EuJaVenhoISwear
+namespace YaVengoOk
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
@@ -28,6 +28,8 @@ namespace EuJaVenhoISwear
         public Form1()
         {
             InitializeComponent();
+
+            Clicker.OnWindowFocusChanged += UpdateStatusPanel;
 
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Style = MetroFramework.MetroColorStyle.Green;
@@ -134,6 +136,17 @@ namespace EuJaVenhoISwear
         {
             timePassed = timePassed.Add(TimeSpan.FromSeconds(1));
             lblTimer.Text = timePassed.ToString(@"hh\:mm\:ss");
+        }
+
+        private void UpdateStatusPanel(bool isOnOriginalWindow)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(() => UpdateStatusPanel(isOnOriginalWindow));
+                return;
+            }
+
+            panelStatus.BackColor = isOnOriginalWindow ? Color.LimeGreen : Color.Gold;
         }
     }
 }
