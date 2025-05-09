@@ -44,9 +44,10 @@ namespace YaVengoOk
             Start.FlatStyle = FlatStyle.Flat;
             Start.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Start.ForeColor = Color.SpringGreen;
-            Start.Location = new Point(60, 87);
+            Start.Location = new Point(52, 65);
+            Start.Margin = new Padding(3, 2, 3, 2);
             Start.Name = "Start";
-            Start.Size = new Size(386, 83);
+            Start.Size = new Size(338, 62);
             Start.TabIndex = 0;
             Start.Text = "Start";
             Start.UseMnemonic = false;
@@ -59,9 +60,10 @@ namespace YaVengoOk
             Stop.FlatStyle = FlatStyle.Flat;
             Stop.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Stop.ForeColor = Color.SpringGreen;
-            Stop.Location = new Point(60, 335);
+            Stop.Location = new Point(52, 251);
+            Stop.Margin = new Padding(3, 2, 3, 2);
             Stop.Name = "Stop";
-            Stop.Size = new Size(386, 83);
+            Stop.Size = new Size(338, 62);
             Stop.TabIndex = 1;
             Stop.Text = "Stop";
             Stop.UseVisualStyleBackColor = false;
@@ -70,9 +72,10 @@ namespace YaVengoOk
             // panelStatus
             // 
             panelStatus.BackColor = Color.Gray;
-            panelStatus.Location = new Point(244, 206);
+            panelStatus.Location = new Point(215, 155);
+            panelStatus.Margin = new Padding(3, 2, 3, 2);
             panelStatus.Name = "panelStatus";
-            panelStatus.Size = new Size(16, 16);
+            panelStatus.Size = new Size(14, 12);
             panelStatus.TabIndex = 2;
             // 
             // lblTimer
@@ -80,9 +83,9 @@ namespace YaVengoOk
             lblTimer.AutoSize = true;
             lblTimer.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTimer.ForeColor = Color.SpringGreen;
-            lblTimer.Location = new Point(129, 225);
+            lblTimer.Location = new Point(123, 169);
             lblTimer.Name = "lblTimer";
-            lblTimer.Size = new Size(253, 81);
+            lblTimer.Size = new Size(204, 65);
             lblTimer.TabIndex = 0;
             lblTimer.Text = "00:00:00";
             // 
@@ -93,18 +96,19 @@ namespace YaVengoOk
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 255);
-            ClientSize = new Size(509, 509);
+            ClientSize = new Size(445, 382);
             ControlBox = false;
             Controls.Add(lblTimer);
             Controls.Add(panelStatus);
             Controls.Add(Stop);
             Controls.Add(Start);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Padding = new Padding(0, 60, 0, 0);
+            Padding = new Padding(0, 45, 0, 0);
             Style = MetroFramework.MetroColorStyle.Green;
             Load += Form1_Load;
             ResumeLayout(false);

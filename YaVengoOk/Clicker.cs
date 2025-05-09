@@ -14,13 +14,14 @@ namespace YaVengoOk
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
-        public static bool IsOnOriginalWindow = true;
-        public static Action<bool>? OnWindowFocusChanged;
 
         public void InitializeTargetWindow()
         {
             _targetWindowHandle = GetForegroundWindow();
         }
+
+        public static bool ClickerPaused = false;
+
 
         public async Task StartClicking(CancellationToken token)
         {
@@ -42,15 +43,14 @@ namespace YaVengoOk
                     await Task.Delay(random.Next(4000, 12000), token);
                 }
 
-                int longPauseSeconds = random.Next(180, 201);
+                int longPauseSeconds = random.Next(180, 251);
                 await Task.Delay(TimeSpan.FromSeconds(longPauseSeconds), token);
             }
         }
 
         private void PerformClickSequence()
         {
-            if (!IsOnOriginalWindow || GetForegroundWindow() != _targetWindowHandle)
-                return;
+            if (ClickerPaused) return;
 
             int clickType = random.Next(0, 10);
 

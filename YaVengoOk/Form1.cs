@@ -29,8 +29,6 @@ namespace YaVengoOk
         {
             InitializeComponent();
 
-            Clicker.OnWindowFocusChanged += UpdateStatusPanel;
-
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
@@ -136,17 +134,6 @@ namespace YaVengoOk
         {
             timePassed = timePassed.Add(TimeSpan.FromSeconds(1));
             lblTimer.Text = timePassed.ToString(@"hh\:mm\:ss");
-        }
-
-        private void UpdateStatusPanel(bool isOnOriginalWindow)
-        {
-            if (InvokeRequired)
-            {
-                Invoke(() => UpdateStatusPanel(isOnOriginalWindow));
-                return;
-            }
-
-            panelStatus.BackColor = isOnOriginalWindow ? Color.LimeGreen : Color.Gold;
         }
     }
 }
