@@ -12,11 +12,11 @@ namespace YaVengoOk
         private readonly Random random = new Random();
         private readonly List<string> processNames = new()
         {
-            "Spotify",
+            "code",
             "devenv",
             "GitHubDesktop",
             "msedge",
-            "Discord"
+            "azuredatastudio"
         };
         private List<IntPtr> validWindowHandles = new();
         private int currentIndex = 0;
