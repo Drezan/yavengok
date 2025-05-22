@@ -10,13 +10,14 @@ namespace YaVengoOk
     {
         private readonly InputSimulator sim = new InputSimulator();
         private readonly Random random = new Random();
-        private readonly List<string> processNames = new()
+        private record WeightedProcess(string Name, int Weight);
+        private readonly List<WeightedProcess> weightedProcesses = new()
         {
-            "code",
-            "devenv",
-            "GitHubDesktop",
-            "msedge",
-            "azuredatastudio"
+            new WeightedProcess("code", 5),
+            new WeightedProcess("devenv", 4),
+            new WeightedProcess("msedge", 3),
+            new WeightedProcess("GitHubDesktop", 1),
+            new WeightedProcess("azuredatastudio", 1)
         };
         private List<IntPtr> validWindowHandles = new();
         private int currentIndex = 0;
@@ -30,6 +31,7 @@ namespace YaVengoOk
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         private const int SW_RESTORE = 9;
+        private const int SW_MAXIMIZE = 3;
 
 
         public void StartSwitching(CancellationToken token)
@@ -47,32 +49,32 @@ namespace YaVengoOk
 
         private void TrySwitchToNextAvailableWindow()
         {
-            int attempts = 0;
-            int total = processNames.Count;
+            var weightedList = BuildWeightedProcessList();
+            var tried = new HashSet<string>();
 
-            while (attempts < total)
+            while (tried.Count < weightedProcesses.Count)
             {
-                string processName = processNames[currentIndex];
-                var hwnd = GetWindowHandleIfProcessRunning(processName);
+                string processName = weightedList[random.Next(weightedList.Count)];
 
-                currentIndex = (currentIndex + 1) % processNames.Count;
+                if (tried.Contains(processName)) continue;
+                tried.Add(processName);
+
+                var hwnd = GetWindowHandleIfProcessRunning(processName);
 
                 if (hwnd.HasValue && IsWindow(hwnd.Value))
                 {
-                    // Simular una interacción humana (presionar ALT brevemente)
                     sim.Keyboard.KeyPress(VirtualKeyCode.MENU);
                     Thread.Sleep(50);
 
-                    // Restaurar ventana (por si está minimizada)
                     ShowWindow(hwnd.Value, SW_RESTORE);
                     Thread.Sleep(50);
 
-                    // Llevar la ventana al frente
+                    ShowWindow(hwnd.Value, SW_MAXIMIZE);
+                    Thread.Sleep(50);
+
                     SetForegroundWindow(hwnd.Value);
                     break;
                 }
-
-                attempts++;
             }
         }
         private IntPtr? GetWindowHandleIfProcessRunning(string processName)
@@ -93,6 +95,13 @@ namespace YaVengoOk
                 }
             }
             return null;
+        }
+
+        private List<string> BuildWeightedProcessList()
+        {
+            return weightedProcesses
+                .SelectMany(p => Enumerable.Repeat(p.Name, p.Weight))
+                .ToList();
         }
 
     }
